@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expressions</title>
+    <style>
+      div {
+        float: left;
+        padding-left: 10px;
+        border: 1px solid black;
+        width: 28%;
+        min-width: 160px;
+        margin: 10px;
+        background: white;
+      }
+      div + p {
+        clear: both;
+      }
+      ul {
+        position: relative;
+        left: -25px;
+      }
+      body {
+        background: lightgray;
+      }
+      input {
+        border: 1px solid black;
+        line-height: 150%;
+        margin: 0 0.5rem 1rem 0;
+      }
+      input + p {
+        color: crimson;
+        font-weight: bold;
+        display: inline;
+      }
+      label {
+        display: inline-block;
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Zip Code: xxxx</p>
+      <ul>
+        <li>20037-8001</li>
+        <li>20037 8001</li>
+        <li>200378001</li>
+        <li>20037</li>
+      </ul>
+    </div>
+    <div>
+      <p>Credit Card Number:</p>
+      <ul>
+        <li>1234-1234-1234-1234</li>
+        <li>1234 1234 1234 1234</li>
+        <li>1234123412341234</li>
+      </ul>
+    </div>
+    <div>
+      <p>Phone Number:</p>
+      <ul>
+        <li>123-456-7890</li>
+        <li>(123)456-7890</li>
+        <li>(123) 456-7890</li>
+        <li>123.456.7890</li>
+        <li>1234567890</li>
+      </ul>
+    </div>
+
+    <p>Here is how you will check it:</p>
+    <form>
+      <label>String:</label>
+      <input type="text" id="string" />
+      <p id="stringAns"></p>
+      <br />
+      <label>Zip Code:</label>
+      <input type="text" id="zip" />
+      <p id="zipAns"></p>
+      <br />
+      <label>Credit Card:</label>
+      <input type="text" id="ccard" />
+      <p id="ccAns"></p>
+      <br />
+      <label>Phone Number:</label>
+      <input type="text" id="phone" />
+      <p id="phoneAns"></p>
+      <br />
+      <input type="submit" value="Submit Form" id="submitBtn" />
+    </form>
+
+    <script src="regEx.js"></script>
+  </body>
+</html>
